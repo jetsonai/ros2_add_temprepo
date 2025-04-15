@@ -1,22 +1,15 @@
 # ros2_add_temprepo
 
-새 터미널을 열고
 
-cd Downloads
+# 패키지 삭제
 
-https://github.com/jetsonai/ros2_add_temprepo
-
-cp -rf ros2_add_temprepo/sensor_test_pack ~/ros2_sensor_ws/src
-
-새 터미널을 열고
-
-DTA
+새 터미널을 열고 DTA
 
 cdsensor
 
-colcon build --packages-select sensor_test_pack
+cd src
 
-sensor_test_pack.lidar_sub_node
+rm -rf sensor_test_pack
 
 # 추가되는 파일 다운로드 받기
 
@@ -26,8 +19,29 @@ cd Downloads/ros2_add_temprepo
 
 git pull
 
-cp ./src/lidar_sub_test.py ~/ros2_sensor_ws/src/sensor_test_pack/src
+cp -rf ros2_add_temprepo/sensor_test_pack ~/ros2_sensor_ws/src
 
-sensor_test_pack 의 setup.py 에 lidar_sub_test 를 추가해주세요.
+# 패키지 교체 및 빌드
+
+패키지 삭제했던 터미널로 돌아가서
+
+cdsensor
+
+colcon build --packages-select sensor_test_pack
+
+# lidar_sub_test 실행
+
+새 터미널을 열고 DTA
+
+sensorws
+
+ros2 launch hls_lfcd_lds_driver hlds_laser_rviz2.launch.py
+
+새 터미널을 열고 DTA
+
+sensorws
+
+ros2 run sensor_test_pack lidar_sub_test
+
 
 
