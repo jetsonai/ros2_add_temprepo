@@ -16,3 +16,5 @@ DTA
 cdsensor
 
 colcon build --packages-select sensor_test_pack
+
+sensor_test_pack.lidar_sub_node
