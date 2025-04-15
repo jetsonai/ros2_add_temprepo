@@ -20,7 +20,7 @@ setup(
     tests_require=['pytest'],
     entry_points={
         'console_scripts': [
-      	   'lidar_sub_node = sensor_test_pack.lidar_sub_node:main',           
+      	   'lidar_sub_test = sensor_test_pack.lidar_sub_test:main',           
         ],
     },
 )
