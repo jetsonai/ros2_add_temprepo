@@ -1,0 +1,29 @@
+mkdir -p ~/build
+ ros2 launch mybot_cartographer cartographer.launch.py use_sim_time:=True
+ 
+ 
+ git clone https://github.com/brektrou/rtl8821CU.git
+ ros2 launch rsaembot_cartographer cartographer.launch.py
+ 
+ cd rtl8821CU/
+ -------------------
+ 
+ lsusb
+
+ make
+ 
+ sudo apt update
+ -------------------------------------
+ 
+ cd rtl8821CU/
+
+
+ ---------------------------
+  
+ sudo apt install build-essential
+
+ sudo apt install dkms
+ 
+ sudo ./dkms-install.sh
+ 
+ sudo modprobe 8821cu
