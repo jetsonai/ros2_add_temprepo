@@ -55,6 +55,11 @@ colcon build --packages-select sensor_test_pack
 
 ros2 run sensor_test_pack lidar_sub_test
 
+#ubuntu host spot.sh
+./hostspot.sh
+
+
+
 
 
 
