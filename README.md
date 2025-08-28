@@ -59,6 +59,11 @@ ros2 run sensor_test_pack lidar_sub_test
 
 ./hostspot.sh
 
+# rsaem 공유 폴더
+
+https://drive.google.com/drive/folders/1xMe8erX6bP25x9A2KSRb6Auz_KyNebzd?usp=sharing
+
+
 
 
 
