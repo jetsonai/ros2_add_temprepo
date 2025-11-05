@@ -54,8 +54,6 @@ class LidarSubscriber(Node):
         print("bSafe:{}".format(bSafe))
         return bSafe
 
-
-
  
 def main(args=None):
 
