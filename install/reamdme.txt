@@ -1,0 +1,25 @@
+
+sudo apt update
+
+locale
+
+   14  sudo apt install software-properties-common
+   15  sudo add-apt-repository universe
+   16  sudo apt update && sudo apt install curl -y
+
+   17  sudo curl -sSL https://raw.githubusercontent.com/ros/rosdistro/master/ros.key -o /usr/share/keyrings/ros-archive-keyring.gpg
+   18  echo "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/ros-archive-keyring.gpg] http://packages.ros.org/ros2/ubuntu $(. /etc/os-release && echo $UBUNTU_CODENAME) main" | sudo tee /etc/apt/sources.list.d/ros2.list > /dev/null
+   19  sudo apt update
+   20  sudo apt upgrade
+
+   21  sudo apt install ros-foxy-desktop python3-argcomplete
+   22  sudo apt install ros-dev-tools
+
+   24  sudo apt install vim
+   25  vim .bashrc
+. .bashrc
+
+ros2 run demo_nodes_cpp talker
+ros2 run demo_nodes_py listener
+
+sudo apt install ros-foxy-cartographer ros-foxy-cartographer-ros ros-foxy-navigation2 ros-foxy-nav2-bringup
