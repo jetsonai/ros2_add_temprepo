@@ -8,7 +8,7 @@ cd Downloads/ros2_add_temprepo
 
 cp -rf ros2_add_temprepo/sensor_test_pack ~/ros2_sensor_ws/src
 
-# 패키지 교체 및 빌드
+# 패키지 빌드
 
 새 터미널을 열고 DTA
 
