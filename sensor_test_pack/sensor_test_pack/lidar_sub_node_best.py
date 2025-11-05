@@ -9,22 +9,31 @@
 import rclpy # Python library for ROS 2
 from rclpy.node import Node # Handles the creation of nodes
 from sensor_msgs.msg import LaserScan 
+
 from rclpy.qos import qos_profile_sensor_data, QoSProfile
+from rclpy.qos import QoSProfile, qos_profile_sensor_data
+from rclpy.qos import QoSReliabilityPolicy
+from rclpy.qos import QoSHistoryPolicy
+from rclpy.qos import QoSDurabilityPolicy
  
 ranges_list = []
  
 class LidarSubscriber(Node):
 
-    def __init__(self):
-        super().__init__('lidar_sub_node')
-        
-        qos = QoSProfile(depth=10)
-          
-        self.subscription = self.create_subscription(
-          LaserScan, 
-          '/scan', 
-          self.listener_callback, 
-          qos_profile=qos_profile_sensor_data)
+  def __init__(self):
+    super().__init__('lidar_sub_node')
+    qos = QoSProfile(
+            reliability=QoSReliabilityPolicy.BEST_EFFORT,
+            history=QoSHistoryPolicy.KEEP_LAST,
+            depth=10,
+            durability=QoSDurabilityPolicy.VOLATILE)
+
+    self.subscription = self.create_subscription(
+      LaserScan, 
+      '/scan', 
+      self.listener_callback, 
+      qos)
+
         self.subscription # prevent unused variable warning
 
    
