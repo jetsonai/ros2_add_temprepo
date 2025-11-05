@@ -28,7 +28,8 @@ sudo apt install ros-foxy-cartographer ros-foxy-cartographer-ros ros-foxy-naviga
    34  sudo apt install ros-foxy-joint-state-*
    35  sudo apt install liburdfdom-tools 
 
-   37  git clone https://github.com/jetsonai/urdf_tutorial_ros2
+sudo apt install ros-foxy-xacro
+
    38  ls
    39  ls urdf_tutorial_ros2/
    40  mkdir -p ros2_urdf_ws/src
