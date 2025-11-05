@@ -6,10 +6,9 @@
 # colcon build --packages-select sensor_test_pack
 # ros2 run sensor_test_pack lidar_sub_node
 
-import rclpy # Python library for ROS 2
-from rclpy.node import Node # Handles the creation of nodes
+import rclpy  # Python library for ROS 2
+from rclpy.node import Node  # Handles the creation of nodes
 from sensor_msgs.msg import LaserScan 
-from rclpy.qos import qos_profile_sensor_data, QoSProfile
  
 ranges_list = []
  
@@ -24,7 +23,8 @@ class LidarSubscriber(Node):
           LaserScan, 
           '/scan', 
           self.listener_callback, 
-          qos_profile=qos_profile_sensor_data)
+          qos)
+     
         self.subscription # prevent unused variable warning
 
    
