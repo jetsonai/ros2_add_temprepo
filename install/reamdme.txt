@@ -23,3 +23,27 @@ ros2 run demo_nodes_cpp talker
 ros2 run demo_nodes_py listener
 
 sudo apt install ros-foxy-cartographer ros-foxy-cartographer-ros ros-foxy-navigation2 ros-foxy-nav2-bringup
+
+
+   34  sudo apt install ros-foxy-joint-state-*
+   35  sudo apt install liburdfdom-tools 
+
+   37  git clone https://github.com/jetsonai/urdf_tutorial_ros2
+   38  ls
+   39  ls urdf_tutorial_ros2/
+   40  mkdir -p ros2_urdf_ws/src
+
+cd ros2_urdf_ws/src/
+
+git clone https://github.com/jetsonai/urdf_tutorial_ros2
+
+cd
+
+   42  git clone https://github.com/jetsonai/mybot_ros2_ws
+   43  cd mybot_ros2_ws/
+   44  colcon build
+   45  history
+
+
+
+
