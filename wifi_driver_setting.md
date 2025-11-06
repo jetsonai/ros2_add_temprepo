@@ -18,11 +18,6 @@ mkdir -p ~/build
  make
  
  sudo apt update
- 
- -------------------------------------
- 
- cd rtl8821CU/
-
 
  ---------------------------
   
@@ -33,4 +28,5 @@ mkdir -p ~/build
  sudo ./dkms-install.sh
  
  sudo modprobe 8821cu
+
 
