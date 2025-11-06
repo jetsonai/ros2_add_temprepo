@@ -3,36 +3,37 @@ sudo apt update
 
 locale
 
-   14  sudo apt install software-properties-common
-   15  sudo add-apt-repository universe
-   16  sudo apt update && sudo apt install curl -y
+sudo apt install software-properties-common
+sudo add-apt-repository universe
+sudo apt update && sudo apt install curl -y
 
-   17  sudo curl -sSL https://raw.githubusercontent.com/ros/rosdistro/master/ros.key -o /usr/share/keyrings/ros-archive-keyring.gpg
-   18  echo "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/ros-archive-keyring.gpg] http://packages.ros.org/ros2/ubuntu $(. /etc/os-release && echo $UBUNTU_CODENAME) main" | sudo tee /etc/apt/sources.list.d/ros2.list > /dev/null
-   19  sudo apt update
-   20  sudo apt upgrade
+sudo curl -sSL https://raw.githubusercontent.com/ros/rosdistro/master/ros.key -o /usr/share/keyrings/ros-archive-keyring.gpg
+echo "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/ros-archive-keyring.gpg] http://packages.ros.org/ros2/ubuntu $(. /etc/os-release && echo $UBUNTU_CODENAME) main" | sudo tee /etc/apt/sources.list.d/ros2.list > /dev/null
+sudo apt update
+sudo apt upgrade
 
-   21  sudo apt install ros-foxy-desktop python3-argcomplete
-   22  sudo apt install ros-dev-tools
+sudo apt install ros-foxy-desktop python3-argcomplete -y
+sudo apt install ros-dev-tools -y
 
-   24  sudo apt install vim
-   25  vim .bashrc
+sudo apt install vim
+vim .bashrc
 . .bashrc
 
 ros2 run demo_nodes_cpp talker
 ros2 run demo_nodes_py listener
 
-sudo apt install ros-foxy-cartographer ros-foxy-cartographer-ros ros-foxy-navigation2 ros-foxy-nav2-bringup
+sudo apt install ros-foxy-cartographer ros-foxy-cartographer-ros ros-foxy-navigation2 ros-foxy-nav2-bringup -y
 
 
-   34  sudo apt install ros-foxy-joint-state-*
-   35  sudo apt install liburdfdom-tools 
+sudo apt install ros-foxy-joint-state-* -y
+sudo apt install liburdfdom-tools  -y
+sudo apt install openssh-server -y
 
-sudo apt install ros-foxy-xacro
+sudo apt install ros-foxy-xacro -y
 
-   38  ls
-   39  ls urdf_tutorial_ros2/
-   40  mkdir -p ros2_urdf_ws/src
+ls
+ls urdf_tutorial_ros2/
+mkdir -p ros2_urdf_ws/src
 
 cd ros2_urdf_ws/src/
 
@@ -40,10 +41,10 @@ git clone https://github.com/jetsonai/urdf_tutorial_ros2
 
 cd
 
-   42  git clone https://github.com/jetsonai/mybot_ros2_ws
-   43  cd mybot_ros2_ws/
-   44  colcon build
-   45  history
+git clone https://github.com/jetsonai/mybot_ros2_ws
+cd mybot_ros2_ws/
+colcon build
+history
 
 
 
